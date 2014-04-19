@@ -1,3 +1,10 @@
+# intermediate data files
+*.png
+3.txt
+
+
+### github boilerplate:
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
