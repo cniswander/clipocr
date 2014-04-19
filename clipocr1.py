@@ -113,11 +113,6 @@ def read_test1(fname):
     im_resized.save(resized_path)
     print do_ocr_to_imagefile(resized_path)
 
-    ##os.system('tesseract ' + resized_path + ' 3' )  
-    ##  # ^ OCR text from the file named /resized_path/, save the text to 3.txt.
-    ##print get_file_text('3.txt')    
-
-
 def do_ocr_to_imagefile(fname):
   """Runs tesseract command line utility on image file /fname/
      and returns the perceived text.
