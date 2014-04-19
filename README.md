@@ -1,4 +1,11 @@
 clipocr
 =======
 
-Performs ocr on the image in the system clipboard.  Used and tested on Linux, but probably compatible with other operating systems if you install the libraries it needs (see README)
+Performs ocr on the image in the system clipboard.  
+
+Demonstrates an image rescaling trick that sometimes improves ocr quality on screen captures.
+
+Used and tested on Linux, but likely to be compatible with other operating systems.
+
+See the "REQUIREMENTS" section of clipocr1.py for a list of the system requirements.
+
