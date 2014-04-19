@@ -82,6 +82,10 @@ def read_test1(fname):
      params = params[0][0], params[0][1], params[1]
      return '_'.join([str(x).strip() for x in params])
 
+  # do ocr on original, non-rescaled image.
+  print 'ORIGINAL IMAGE:'
+  print do_ocr_to_imagefile(fname)
+
   im1 = Image.open(fname)
 
   # List of image resizing methods to try.
@@ -107,9 +111,23 @@ def read_test1(fname):
     resized_path = fname + '__' + params_textname(resize_method) + '.png'
     print resized_path
     im_resized.save(resized_path)
-    os.system('tesseract ' + resized_path + ' 3' )  
-      # ^ OCR text from the file named /resized_path/, save the text to 3.txt.
-    print get_file_text('3.txt')    
+    print do_ocr_to_imagefile(resized_path)
+
+    ##os.system('tesseract ' + resized_path + ' 3' )  
+    ##  # ^ OCR text from the file named /resized_path/, save the text to 3.txt.
+    ##print get_file_text('3.txt')    
+
+
+def do_ocr_to_imagefile(fname):
+  """Runs tesseract command line utility on image file /fname/
+     and returns the perceived text.
+
+     SIDE EFFECTS:
+       Creates file 3.txt in current working directory.
+  """   
+  os.system('tesseract ' + fname + ' 3' )  
+    # ^ OCR text from the file named /resized_path/, save the text to 3.txt.
+  return get_file_text('3.txt')    
 
 
 def save_clipboard(fname):
@@ -158,3 +176,4 @@ def clear_clipboard():
     del app
     raise Exception("couldn't find image data in clipboard")
   del app
+
