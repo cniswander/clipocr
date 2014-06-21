@@ -167,8 +167,5 @@ def clear_clipboard():
   wx.TheClipboard.Open()
   wx.TheClipboard.Clear()
   wx.TheClipboard.Close()
-  if not clipboard_getdata_status:
-    del app
-    raise Exception("couldn't find image data in clipboard")
   del app
 
