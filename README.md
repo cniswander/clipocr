@@ -3,7 +3,7 @@ clipocr
 
 Performs ocr on the image in the system clipboard.  
 
-Demonstrates an image rescaling trick that sometimes improves ocr quality on screen captures.
+Demonstrates an image rescaling technique that sometimes improves ocr quality on screen captures.
 
 Used and tested on Linux, but likely to be compatible with other operating systems.
 
