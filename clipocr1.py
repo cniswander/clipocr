@@ -6,7 +6,8 @@
   Demonstrates a technique that often improves ocr quality on screen captures.
 
   Reads an image from the system clipboard,
-  and prints text recognized in the image, by using tesseract OCR.
+  and writes to stdout various versions of the text recognized in the image.
+  Uses tesseract OCR.
   
   The technique is based on judicious rescaling of image dimensions.
   
