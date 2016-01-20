@@ -3,17 +3,16 @@
 
   clipocr1.py
 
+  Demonstrates a technique that often improves ocr quality on screen captures.
+
   Reads an image from the system clipboard,
   and prints text recognized in the image, by using tesseract OCR.
   
-  The one perhaps unusual trick to be found herein is
-  resizing the image to larger sizes, which sometimes makes a screen capture
-  easier for OCR code to process.
-
+  The technique is based on judicious rescaling of image dimensions.
   
   SIDE EFFECT: 
 
-    Creates image files and text file in current working dir.
+    Creates image files and text file in current working directory.
 
 
   REQUIREMENTS:
