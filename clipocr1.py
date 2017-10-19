@@ -57,7 +57,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 """
 
 import os
-import Image   # PIL 
+from PIL import Image 
 import wx      # just to access the system clipboard.
 
 
